@@ -58,12 +58,14 @@ reports/figures/*
 Thumbs.db
 """
 
-REQUIREMENTS_TXT = """pandas>=2.2
-numpy>=1.26
-matplotlib>=3.8
-scikit-learn>=1.5
-scipy>=1.13
-jupyter>=1.0
+REQUIREMENTS_TXT = """pandas>=3.0
+numpy>=2.4
+matplotlib>=3.10
+seaborn>=0.13
+scikit-learn>=1.8
+scipy>=1.17
+ipykernel>=6.29
+jupyter>=1.1
 """
 
 LICENSE_MIT = """MIT License
