@@ -1,0 +1,6 @@
+* @rajks24
+
+# Dependency policy and automation require maintainer review.
+/aiml_scaffolder/dependency_catalog.toml @rajks24
+/.github/ @rajks24
+/SECURITY.md @rajks24

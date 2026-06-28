@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If this scaffolder supports your work, please cite the software repository."
+title: "AIML Project Scaffolder"
+type: software
+authors:
+  - family-names: Singh
+    given-names: Rajesh
+repository-code: "https://github.com/rajks24/aiml-project-scaffolder"
+url: "https://github.com/rajks24/aiml-project-scaffolder"
+license: MIT
+version: 2.0.0
+date-released: 2026-06-28
+keywords:
+  - artificial intelligence
+  - machine learning
+  - project scaffolding
+  - Python
+  - MLOps

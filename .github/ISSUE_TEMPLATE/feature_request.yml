@@ -1,0 +1,59 @@
+name: Feature request
+description: Propose a focused improvement to the scaffolder or generated project practices
+title: "[Feature]: "
+labels: ["enhancement", "needs-triage"]
+body:
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Initial checks
+      options:
+        - label: I searched existing issues, pull requests, and documentation.
+          required: true
+        - label: This request describes a concrete user workflow rather than only a preferred tool.
+          required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or user need
+      description: Who needs this, and what cannot be done cleanly today?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+      description: Describe CLI, generated files, compatibility, and documentation changes.
+    validations:
+      required: true
+  - type: textarea
+    id: example
+    attributes:
+      label: Example usage or generated output
+      render: shell
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Primary scope
+      options:
+        - Interactive CLI
+        - Dependency profile
+        - Environment or Jupyter
+        - Experiment tracking
+        - Data versioning
+        - Generated template
+        - CI or developer tooling
+        - Documentation
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Explain workarounds and relevant tradeoffs.
+  - type: textarea
+    id: compatibility
+    attributes:
+      label: Compatibility considerations
+      description: Note Python, platform, uv, Conda, profile, migration, or breaking-change concerns.

@@ -1,0 +1,57 @@
+# Central dependency catalog for every generated project.
+#
+# Add packages that every runtime needs to `core`. Profile-specific and optional
+# integration packages belong in their corresponding sections. Lower bounds are
+# intentionally used so `uv.lock` can capture an exact, reproducible resolution.
+
+[settings]
+default_python = "3.12"
+
+[dependencies]
+core = []
+
+[profiles.general]
+packages = ["numpy>=2.2", "pandas>=2.2", "scikit-learn>=1.6"]
+
+[profiles.tabular]
+packages = [
+  "pyarrow>=19",
+  "imbalanced-learn>=0.14",
+  "xgboost>=3.0",
+]
+
+[profiles.deep-learning]
+packages = ["numpy>=2.2", "torch>=2.7", "torchvision>=0.22", "lightning>=2.5"]
+
+[profiles.genai]
+packages = ["pydantic>=2.10", "openai>=1.75", "tenacity>=9.0"]
+
+[profiles.hf]
+packages = [
+  "datasets>=3.5",
+  "transformers>=4.51",
+  "evaluate>=0.4",
+  "accelerate>=1.6",
+  "huggingface-hub>=0.30",
+]
+
+[tracking.local]
+packages = []
+
+[tracking.mlflow]
+packages = ["mlflow>=3.0"]
+
+[data-versioning.none]
+packages = []
+
+[data-versioning.dvc]
+packages = ["dvc>=3.59"]
+
+[groups]
+dev = ["pytest>=8.3", "pytest-cov>=6.0", "ruff>=0.11", "pre-commit>=4.2"]
+notebooks = [
+  "ipykernel>=6.29",
+  "jupyterlab>=4.4",
+  "matplotlib>=3.10",
+  "seaborn>=0.13",
+]

@@ -1,0 +1,62 @@
+name: Package or profile request
+description: Propose adding or updating a package in the central dependency catalog
+title: "[Package]: "
+labels: ["dependencies", "needs-triage"]
+body:
+  - type: input
+    id: package
+    attributes:
+      label: Package name and proposed constraint
+      placeholder: package-name>=1.2
+    validations:
+      required: true
+  - type: dropdown
+    id: destination
+    attributes:
+      label: Proposed catalog section
+      options:
+        - dependencies.core
+        - profiles.general
+        - profiles.tabular
+        - profiles.deep-learning
+        - profiles.genai
+        - profiles.hf
+        - tracking
+        - data-versioning
+        - groups.dev
+        - groups.notebooks
+        - New profile
+    validations:
+      required: true
+  - type: textarea
+    id: workflow
+    attributes:
+      label: User workflow
+      description: Show the experiment or generated-project workflow that needs this package.
+    validations:
+      required: true
+  - type: textarea
+    id: justification
+    attributes:
+      label: Why this package
+      description: Compare maintained alternatives and explain why existing dependencies are insufficient.
+    validations:
+      required: true
+  - type: textarea
+    id: compatibility
+    attributes:
+      label: Compatibility and maintenance evidence
+      description: Include supported Python/platforms, uv/Conda behavior, release activity, package size, and license.
+    validations:
+      required: true
+  - type: checkboxes
+    id: review
+    attributes:
+      label: Dependency review
+      options:
+        - label: I checked the package license and upstream maintenance status.
+          required: true
+        - label: I considered installation weight and whether this should remain optional.
+          required: true
+        - label: I can help add tests and documentation for this dependency.
+          required: false

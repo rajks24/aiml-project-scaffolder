@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Documentation and support
+    url: https://github.com/rajks24/aiml-project-scaffolder/blob/main/SUPPORT.md
+    about: Review usage guidance and the information needed when requesting help.
+  - name: Security vulnerability
+    url: https://github.com/rajks24/aiml-project-scaffolder/security/advisories/new
+    about: Report suspected vulnerabilities privately instead of opening a public issue.
